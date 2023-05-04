@@ -1,0 +1,117 @@
+.nav-container{
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    margin-bottom: 50px;
+    z-index: 100;
+}
+
+.background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(2px);
+  }
+
+.nav-container-sticky{
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.9);
+    position: fixed;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    margin-bottom: 50px;
+    z-index: 100;
+}
+
+.container{
+    padding-left: 100px;
+    padding-right: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo{
+    font-size: 18px;
+    font-weight: bolder;
+    color: black;
+    letter-spacing: -1;
+    line-height: 20px;
+}
+
+.nav-menu{
+    display: flex;
+    align-items: center;
+}
+
+.nav-icon{
+    display: none;
+}
+
+.nav-link{
+    margin-left: 20px;
+    color: #111111;
+    font-weight: 600;
+}
+
+.btn{
+    background-color: #F3F3F3;
+    padding: 7px 12px;
+    width: fit-content;
+    
+}
+
+.nav-menu .btn-2:hover{
+    font-weight: 500;
+    cursor: pointer;
+}
+
+
+.nav-menu .btn:hover{
+    background-color: #f8f8f8;
+}
+
+a{
+    text-decoration: none;
+}
+
+.mobile-open{
+    display: none;
+}
+
+@media screen and (max-width: 768px) {
+    .container{
+        padding-left: 20px;
+        padding-right: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .nav-menu{
+        display: none;
+    }
+
+    .nav-icon{
+        display: flex;
+    }
+
+    .nav-icon i{
+        font-size: 24px;
+        margin-left: 15px;
+    }
+
+    .mobile-open .nav-menu{
+        display: block;
+        flex-direction: column;
+    }
+
+    .mobile-open{
+        display: block;
+    }
+}
