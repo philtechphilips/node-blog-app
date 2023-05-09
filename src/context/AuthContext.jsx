@@ -54,7 +54,7 @@ export const AuthProvider = ({ children }) => {
   const logout = async ({ ...data }) => {
     try {
       const token = JSON.parse(localStorage.getItem("user")).token; // extract token from localStorage
-      await axios.post("/users/logout", data, {
+      await axios.post("/auth/logout", data, {
         headers: {
           Authorization: `Bearer ${token}`, // set Authorization header with token value
         },
@@ -62,7 +62,7 @@ export const AuthProvider = ({ children }) => {
       //   console.log(response);
       localStorage.removeItem("user");
       setUser(null);
-      navigate("/login");
+      navigate("/sign-in");
     } catch (error) {
       //   console.log(error);
     }

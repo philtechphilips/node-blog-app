@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
 import "./Navbar.css";
 import { Link } from "react-router-dom";
-import "remixicon/fonts/remixicon.css";
-import useAuthContext from "../context/AuthContext";
+import 'remixicon/fonts/remixicon.css';
+import useAuthContext from "../../context/AuthContext";
 
 const Navbar = () => {
   const [isSticky, setSticky] = useState(false);

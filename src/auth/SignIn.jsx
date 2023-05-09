@@ -47,7 +47,7 @@ const SignIn = () => {
               isSubmitting && "cursor-not-allowed"
             }`}
           >
-            {isSubmitting ? "Submitting..." : "Create Account"}
+            {isSubmitting ? "Submitting..." : "Login"}
           </button>
         </div>
         <p className="text-center font-medium">Don&lsquo;t have an accout?<Link to="/sign-up" className="text-blue-900 font-bold"> Sign Up</Link></p>
