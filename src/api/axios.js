@@ -1,7 +1,7 @@
 import axios from "axios";
 
 export default axios.create({
-    baseURL: "https://nodeblogapp.onrender.com/api",
+    baseURL: process.env.BACKEND_URL,
     withCredentials: false,
    
 })
