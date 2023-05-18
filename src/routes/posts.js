@@ -7,15 +7,7 @@ const sharp = require("sharp");
 // Create Post Route
 
 const upload = multer({
-  limits: {
-    fileSize: 1000000,
-  },
-  fileFilter(req, file, cb) {
-    if (!file.originalname.match(/\.(jpg|jpeg|png)$/)) {
-      return cb(new Error("Please upload an image file!"));
-    }
-    cb(undefined, true);
-  },
+ 
 });
 
 router.post("/", auth, async (req, res) => {
@@ -68,15 +60,6 @@ router.delete("/:id", auth, async (req, res) => {
     res.status(200).send(post);
   } catch (e) {
     res.status(500).send(e);
-  }
-});
-
-router.get("/:id", async (req, res) => {
-  try {
-    const post = await Post.findById({ _id: req.params.id });
-    res.status(200).send(post);
-  } catch (e) {
-    res.status(400).send(e);
   }
 });
 
